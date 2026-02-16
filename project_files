@@ -1,0 +1,110 @@
+System Request:	HouseBroker: House Price Recommendation System 
+Project Sponsor:	Krishna Vamsi Mada
+Business Need:	People who plan to buy or rent a house often struggle to determine whether a listed property price is reasonable. Many rely on guesswork, listing comparisons, or informal opinions, which may not reflect actual market value. As a result, buyers and renters may overpay or miss fair deals.
+The title of this project is HouseBroker. It uses price prediction and recommends a price range for people who want to purchase or rent a house. Price prediction is based on attributes such as location, number of rooms, proximity to amenities, accessibility, and similar housing characteristics.
+There are already platforms such as Airbnb, NoBroker, and other real estate applications that provide price-related insights. The idea of estimating property value is therefore not new or cutting-edge. The purpose of this project is different. The core objective is to put theory into practice for a realistic demonstration of concepts learned in coursework. Instead of proposing a novel market product, this project demonstrates a real implementation of predictive analytics concepts within a functional system.
+Real datasets such as the Boston housing dataset and other publicly available housing datasets will be used to simulate real-world conditions. Using multiple datasets helps represent variation across housing markets and supports realistic system behavior during demonstration.
+Business Requirements:	Input
+User enters property details, including:
+•	Location indicators
+•	Number of rooms
+•	Proximity to amenities
+•	Accessibility factors
+•	Other relevant housing attributes
+
+Processing
+•	Dataset preparation and cleaning
+•	Feature selection
+•	Training regression-based prediction models
+•	Model testing and evaluation
+•	Price estimation logic
+
+Output
+•	Predicted property price
+•	Recommended price range
+•	Indicator showing whether property appears underpriced, fairly priced, or overpriced
+•	Display of key variables influencing prediction
+
+Interface
+•	Web-based interface for user input
+•	Results panel displaying predictions and analysis
+•	Clear presentation designed for interpretability
+Business Value:	HouseBroker supports housing decisions by providing a structured estimate rather than relying only on listing prices. The system demonstrates how predictive models can assist users in evaluating property values.
+Expected benefits include:
+•	Better understanding of how property features affect price
+•	Reduced reliance on guesswork in price evaluation
+•	Practical demonstration of regression and predictive modeling concepts
+•	Real implementation experience using data-driven decision methods
+The value of this project lies in demonstrating applied analytics in a realistic decision-support scenario rather than building a commercial real estate platform.
+
+Special Issues or Constraints:	•	Prediction accuracy depends on dataset quality and feature representation
+•	Historical datasets may not capture sudden market changes
+•	The system provides estimation guidance, not financial or legal advice
+•	The scope focuses on interpretable regression models
+
+Company Background 
+HouseBroker is a predictive analytics system implemented in Python that estimates housing prices using structured regression models. The purpose of this system is to support property evaluation decisions by calculating an estimated value from measurable housing attributes rather than relying only on listing prices.
+Regarding the problem, housing markets are influenced by multiple interacting variables such as location, room count, accessibility, and neighborhood characteristics. These variables do not affect price independently. Instead, they collectively determine value through statistical relationships. Therefore, a regression-based model is appropriate because it quantifies the contribution of each feature.
+This project does not attempt to introduce a new real estate platform. Instead, it focuses on implementing predictive modeling concepts in a working system using real datasets such as the Boston housing dataset and other public housing datasets. The emphasis is on applied analytics, interpretability, and measurable outputs.
+From analysis of the system request, the identified Actors are:
+•	End User
+•	Model Administrator
+The primary Use-Cases are:
+•	Enter housing attributes
+•	Submit property for prediction
+•	Generate estimated price
+•	Compute recommended price range
+•	Classify pricing status
+•	Display feature influence
+•	Upload datasets
+•	Train regression models
+•	Evaluate model performance
+•	Activate selected model
+The following sections list the functional and non-functional requirements.
+
+Requirements Definition 
+Functional Requirements
+1.	An End User inputs location-related variables into the system.
+2.	An End User inputs number of rooms.
+3.	An End User inputs accessibility-related variables.
+4.	An End User inputs proximity indicators to amenities.
+5.	An End User inputs additional numeric housing features required by the model.
+6.	An End User provides an optional listing price.
+7.	An End User submits the complete property profile for analysis.
+8.	The system verifies completeness of required housing attributes.
+9.	The system validates numeric range of submitted features.
+10.	The system converts categorical inputs into numerical representations when necessary.
+11.	The system aligns user input with the trained model’s feature structure.
+12.	The system standardizes or scales feature values consistent with training configuration.
+13.	The system logs input validation results.
+14.	The system executes the active regression model using processed input features.
+15.	The system computes an estimated property price.
+16.	The system calculates an expected price interval based on model residual distribution.
+17.	The system compares predicted value with listing price when provided.
+18.	The system calculates percentage deviation between predicted price and listing price.
+19.	The system assigns pricing status as underpriced, fairly priced, or overpriced.
+20.	The system extracts regression coefficients or feature contribution metrics.
+21.	The system ranks input features based on contribution magnitude.
+22.	The system displays estimated property price.
+23.	The system displays calculated price interval.
+24.	The system displays pricing status classification.
+25.	The system displays influential variables affecting prediction.
+26.	A Model Administrator imports housing datasets into the system.
+27.	The system performs dataset cleaning by handling missing or inconsistent values.
+28.	The system performs feature selection based on statistical relevance.
+29.	The system trains regression-based models using prepared datasets.
+30.	The system computes evaluation metrics including RMSE and R².
+31.	A Model Administrator reviews model evaluation metrics.
+32.	A Model Administrator selects and activates a trained model for prediction tasks.
+33.	A Model Administrator updates dataset records.
+34.	A Model Administrator removes obsolete datasets.
+ 
+Non-Functional Requirements
+1.	The system will return price estimation results within a reasonable analytical runtime suitable for interactive evaluation.
+2.	The system will complete model training within a demonstrable time window appropriate for regression computation on moderate datasets.
+3.	The system will restrict dataset import and model activation functions to Model Administrator accounts.
+4.	The system will require authentication before allowing administrative operations.
+5.	The system will implement interpretable regression-based prediction techniques.
+6.	The system will document model assumptions used in prediction.
+7.	The system will present output as estimation guidance rather than financial or legal advice.
+8.	The system will acknowledge that prediction reliability depends on dataset representativeness and market stability.
